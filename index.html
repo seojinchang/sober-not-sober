@@ -7,22 +7,58 @@
 
   <title>Seojin's Sober Log</title>
 
-  <!-- 캐시 방지를 위해 v=3 추가 -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+
+  <!-- 링크 공유 미리보기 -->
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:url"
+    content="https://seojinchang.github.io/sober-not-sober/"
+  >
+
+  <meta
+    property="og:title"
+    content="Seojin's Sober Log"
+  >
+
+  <meta
+    property="og:description"
+    content="애주가 장서진의 금주 현황을 기록하고 공유합니다."
+  >
+
+  <meta
+    property="og:image"
+    content="https://seojinchang.github.io/sober-not-sober/assets/img/1.jpeg"
+  >
+
+  <meta property="og:image:type" content="image/jpeg">
+
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="768">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
+
 </head>
+
 
 <body>
 
   <main class="container">
+
+
+    <!-- 소개 -->
 
     <header class="intro">
 
       <h1>Seojin's Sober Log</h1>
 
       <p>
-        이 웹사이트는 애주가 장서진의 음주 현황을 기록하고 공유하기 위해 만들어졌습니다.
+        이 웹사이트는 애주가 장서진의 금주 현황을 기록하고 공유하기 위해 만들어졌습니다.
         장서진은 일주일에 최대 두 번의 음주만을 허용하고 싶어하나,
-        친구들의 당일 부름과 제철 안주, 각종 날씨 앞에서 그 다짐이 쉽게 흔들립니다.
+        친구들의 당일 부름과 제철 안주, 각종 날씨 앞에서 그 다짐이 쉽게 흔들리곤 합니다.
         스스로의 음주 습관을 돌아보고 마음을 다잡는 동시에,
         가까운 친구들에게도 작은 협조를 구하고자 이 사이트를 만들었습니다.
       </p>
@@ -30,7 +66,13 @@
     </header>
 
 
+
+    <!-- 캘린더 -->
+
     <section class="calendar-section">
+
+
+      <!-- 년월 / 이전 다음 -->
 
       <div class="calendar-header">
 
@@ -43,7 +85,11 @@
       </div>
 
 
+
+      <!-- 요일 -->
+
       <div class="weekdays">
+
         <div>일</div>
         <div>월</div>
         <div>화</div>
@@ -51,43 +97,84 @@
         <div>목</div>
         <div>금</div>
         <div>토</div>
+
       </div>
 
+
+
+      <!-- 실제 달력 -->
 
       <div id="calendar" class="calendar-grid"></div>
 
 
+
+      <!-- 상태 설명 -->
+
       <div class="legend">
 
         <div class="legend-item">
+
           <span class="legend-color sober"></span>
-          <span class="legend-name">sober</span>
-          <span class="legend-desc">한 잔도 마시지 않음</span>
+
+          <span class="legend-name">
+            sober
+          </span>
+
+          <span class="legend-desc">
+            한 잔도 마시지 않음
+          </span>
+
         </div>
 
+
         <div class="legend-item">
+
           <span class="legend-color buzzed"></span>
-          <span class="legend-name">buzzed</span>
-          <span class="legend-desc">맥주 두 잔 이하</span>
+
+          <span class="legend-name">
+            buzzed
+          </span>
+
+          <span class="legend-desc">
+            맥주 두 잔 이하
+          </span>
+
         </div>
 
+
         <div class="legend-item">
+
           <span class="legend-color drunk"></span>
-          <span class="legend-name">drunk</span>
-          <span class="legend-desc">!@#$%^&*()</span>
+
+          <span class="legend-name">
+            drunk
+          </span>
+
+          <span class="legend-desc">
+            !@#$%^&*()
+          </span>
+
         </div>
 
       </div>
 
+
     </section>
 
+
+
+    <!-- 마지막 업데이트 -->
 
     <footer class="last-update">
       last update 2026.09.07
     </footer>
 
+
   </main>
 
+
+
+  <!-- JavaScript -->
 
   <script src="script.js"></script>
 
