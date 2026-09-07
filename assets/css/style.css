@@ -1,0 +1,337 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 94%;
+  max-width: 1600px;
+
+  margin: 70px auto 100px;
+}
+
+
+/* 소개 */
+
+.intro {
+  max-width: 760px;
+  margin-bottom: 80px;
+}
+
+h1 {
+  margin: 0 0 24px;
+
+  font-size: 48px;
+  font-weight: 600;
+  font-family: monospace;
+
+  letter-spacing: -1.5px;
+}
+
+.intro p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  word-break: keep-all;
+}
+
+
+/* 캘린더 */
+
+.calendar-section {
+  width: 100%;
+}
+
+
+/* 년월 + 화살표 */
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.calendar-header button {
+  padding: 10px;
+
+  border: 0;
+  background: none;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+/* 요일 */
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+
+  width: 100%;
+
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.weekdays div {
+  min-width: 0;
+
+  padding: 15px;
+
+  text-align: center;
+
+  border-right: 1px solid #ddd;
+
+  font-size: 14px;
+}
+
+
+/* 날짜 */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+
+  width: 100%;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.day {
+  min-width: 0;
+  min-height: 180px;
+
+  padding: 12px;
+
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.day:nth-child(7n + 1) {
+  border-left: 1px solid #ddd;
+}
+
+.day-number {
+  margin-bottom: 12px;
+
+  font-size: 15px;
+}
+
+.other-month {
+  background: #fafafa;
+  color: #aaa;
+}
+
+
+/* 일정 라벨 */
+
+.event {
+  width: 100%;
+
+  margin-bottom: 5px;
+
+  padding: 4px 10px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  color: white;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+/* sober */
+
+.event.sober {
+  background: #c2cf27;
+
+  animation: soberPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes soberPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+}
+
+
+/* buzzed */
+
+.event.buzzed {
+  background: #e77b73;
+}
+
+
+/* drunk */
+
+.event.drunk {
+  background: #9c27b0;
+}
+
+
+/* 기타 일정 */
+
+.event.other {
+  background: #777;
+}
+
+
+/* 범례 */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 25px;
+
+  font-size: 13px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+/* 범례 동그라미 */
+
+.legend-color {
+  display: inline-block;
+
+  width: 10px;
+  height: 10px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+.legend-color.sober {
+  background: #c2cf27;
+}
+
+.legend-color.buzzed {
+  background: #e77b73;
+}
+
+.legend-color.drunk {
+  background: #9c27b0;
+}
+
+
+/* 범례 텍스트 */
+
+.legend-name {
+  font-weight: 500;
+}
+
+.legend-desc {
+  color: #888;
+}
+
+
+/* 마지막 업데이트 */
+
+.last-update {
+  margin-top: 60px;
+
+  font-size: 11px;
+  color: #aaa;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 95%;
+    margin-top: 40px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .intro {
+    margin-bottom: 50px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  .weekdays div {
+    padding: 10px 4px;
+
+    font-size: 12px;
+  }
+
+  .day {
+    min-height: 100px;
+
+    padding: 6px;
+  }
+
+  .day-number {
+    font-size: 12px;
+  }
+
+  .event {
+    padding: 3px 5px;
+
+    font-size: 10px;
+  }
+
+  .legend {
+    gap: 15px;
+
+    margin-top: 20px;
+
+    font-size: 12px;
+  }
+
+  .last-update {
+    margin-top: 40px;
+
+    font-size: 10px;
+  }
+
+}

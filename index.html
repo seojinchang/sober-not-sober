@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Seojin's Sober Log</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="intro">
+
+      <h1>Seojin's Sober Log</h1>
+
+      <p>
+        이 웹사이트는 애주가 장서진의 금주 현황을 기록하고 공유하기 위해 만들어졌습니다.
+        장서진은 일주일에 최대 두 번의 음주만을 허용하고 싶어하나,
+        친구들의 당일 부름과 제철 안주, 각종 날씨 앞에서 그 다짐이 쉽게 흔들립니다.
+        스스로의 음주 습관을 돌아보고 마음을 다잡는 동시에,
+        가까운 친구들에게도 작은 협조를 구하고자 이 사이트를 만들었습니다.
+      </p>
+
+    </header>
+
+
+    <section class="calendar-section">
+
+      <div class="calendar-header">
+
+        <button id="prevMonth">←</button>
+
+        <h2 id="monthTitle"></h2>
+
+        <button id="nextMonth">→</button>
+
+      </div>
+
+
+      <div class="weekdays">
+        <div>일</div>
+        <div>월</div>
+        <div>화</div>
+        <div>수</div>
+        <div>목</div>
+        <div>금</div>
+        <div>토</div>
+      </div>
+
+
+      <div id="calendar" class="calendar-grid"></div>
+
+
+      <div class="legend">
+
+        <div class="legend-item">
+          <span class="legend-color sober"></span>
+          <span class="legend-name">sober</span>
+          <span class="legend-desc">한 잔도 마시지 않음</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color buzzed"></span>
+          <span class="legend-name">buzzed</span>
+          <span class="legend-desc">맥주 두 잔 이하</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color drunk"></span>
+          <span class="legend-name">drunk</span>
+          <span class="legend-desc">!@#$%^&*()</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer class="last-update">
+      last update 2026.09.07
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
